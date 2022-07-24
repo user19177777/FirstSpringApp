@@ -10,8 +10,8 @@
     <!-- импорт musicPlayer.properties -->
     <context:property-placeholder location="musicPlayer.properties"/>
 
-    <!-- по умолчанию <scope=singleton/>-->
-    <bean id="rockMusic" class="RockMusic"/>
+    <!-- <scope=prototype/>-->
+    <bean id="rockMusic" class="RockMusic" scope="prototype"/>
 
     <bean id="music" class="ClassicMusic"/>
 
