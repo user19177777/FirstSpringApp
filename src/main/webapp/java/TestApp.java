@@ -11,6 +11,7 @@ public class TestApp {
             MusicPlayer player = context.getBean("musicPlayer",MusicPlayer.class);
             player.play();
             System.out.println(player.getName());
+            System.out.println(player.getId());
             context.close();
     }
 }

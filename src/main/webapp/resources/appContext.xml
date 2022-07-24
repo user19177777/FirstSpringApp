@@ -7,12 +7,18 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- импорт musicPlayer.properties -->
+    <context:property-placeholder location="musicPlayer.properties"/>
+
     <bean id="music" class="ClassicMusic"/>
 
     <bean id="musicPlayer" class="MusicPlayer">
         <!-- внедрение зависимости через конструктор-->
         <constructor-arg ref="music"/>
+        <!-- внедрение зависимости через сеттер (значение)-->
         <property name="name" value="MusicPlayer"/>
+        <!-- внедрение зависимости через сеттер (значение из файла musicPlayer.properties)-->
+        <property name="id" value="${musicPlayer.id}"/>
     </bean>
 
 </beans>
