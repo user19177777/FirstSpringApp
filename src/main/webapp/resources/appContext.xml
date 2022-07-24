@@ -12,6 +12,7 @@
     <bean id="musicPlayer" class="MusicPlayer">
         <!-- внедрение зависимости через конструктор-->
         <constructor-arg ref="music"/>
+        <property name="name" value="MusicPlayer"/>
     </bean>
 
 </beans>

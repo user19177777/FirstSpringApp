@@ -10,6 +10,7 @@ public class TestApp {
             Music music = context.getBean("music",ClassicMusic.class);
             MusicPlayer player = context.getBean("musicPlayer",MusicPlayer.class);
             player.play();
+            System.out.println(player.getName());
             context.close();
     }
 }

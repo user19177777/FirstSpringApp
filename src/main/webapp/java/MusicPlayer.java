@@ -1,5 +1,15 @@
 public class MusicPlayer {
     Music music;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     // через конструктор
     public MusicPlayer(Music music) {
         this.music = music;
