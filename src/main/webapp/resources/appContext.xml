@@ -10,8 +10,8 @@
     <!-- импорт musicPlayer.properties -->
     <context:property-placeholder location="musicPlayer.properties"/>
 
-    <!-- <scope=prototype/>-->
-    <bean id="rockMusic" class="RockMusic" scope="prototype"/>
+    <!-- init-method, destroy-method -->
+    <bean id="rockMusic" class="RockMusic" init-method="doMyInit" destroy-method="doMyDestroy"/>
 
     <bean id="music" class="ClassicMusic"/>
 
