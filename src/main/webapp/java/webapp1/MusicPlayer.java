@@ -1,3 +1,8 @@
+package webapp1;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class MusicPlayer {
     Music music;
     // через конструктор
