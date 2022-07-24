@@ -7,11 +7,8 @@ public class TestApp {
                     "appContext.xml"
             );
             //достаем бин из контекста
-            Music music = context.getBean("music",ClassicMusic.class);
             MusicPlayer player = context.getBean("musicPlayer",MusicPlayer.class);
             player.play();
-            System.out.println(player.getName());
-            System.out.println(player.getId());
             context.close();
     }
 }

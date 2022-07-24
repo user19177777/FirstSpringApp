@@ -10,6 +10,8 @@
     <!-- импорт musicPlayer.properties -->
     <context:property-placeholder location="musicPlayer.properties"/>
 
+    <bean id="rockMusic" class="RockMusic"/>
+
     <bean id="music" class="ClassicMusic"/>
 
     <bean id="musicPlayer" class="MusicPlayer">
@@ -19,6 +21,8 @@
         <property name="name" value="MusicPlayer"/>
         <!-- внедрение зависимости через сеттер (значение из файла musicPlayer.properties)-->
         <property name="id" value="${musicPlayer.id}"/>
+        <!-- внедрение зависимости через сеттер (bean)-->
+        <property name="music" ref="rockMusic"/>
     </bean>
 
 </beans>
