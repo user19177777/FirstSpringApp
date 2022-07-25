@@ -5,13 +5,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    Music music;
+    private Music music;
     // через конструктор
-    //автоматически подбирает бин(автосвязывание)
-    @Autowired
     public MusicPlayer(Music music) {
         this.music = music;
     }
+    //через сеттер
+    //автоматически подбирает бин(автосвязывание)
+    @Autowired
+    public void setMusic(Music music) {
+        this.music = music;
+    }
+
     public void play(){
         System.out.println("Now playing "+music.getSong());
     }
