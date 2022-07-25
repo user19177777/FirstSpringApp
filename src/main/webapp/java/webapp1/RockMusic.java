@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-//по умолчанию singleton
-@Scope("singleton")
+//prototype
+@Scope("prototype")
 public class RockMusic implements Music{
     @Override
     public String getSong() {
