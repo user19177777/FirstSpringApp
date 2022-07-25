@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    //через поле
-    //автоматически подбирает бин(автосвязывание)
-    @Autowired
-    //уточняет, какой бин выбрать
-    @Qualifier("rockMusic")
     private Music music;
+    //через конструктор
+    @Autowired
+    public MusicPlayer(@Qualifier("rockMusic") Music music) {
+        this.music = music;
+    }
 
     public void play(){
         System.out.println("Now playing "+music.getSong());
