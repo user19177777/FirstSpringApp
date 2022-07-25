@@ -10,4 +10,5 @@
     <!-- подключаем сканирование бинов по аннотациям -->
     <context:component-scan base-package="webapp1"/>
 
+    <context:property-placeholder location="musicPlayer.properties"/>
 </beans>
