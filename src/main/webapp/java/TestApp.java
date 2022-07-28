@@ -9,6 +9,7 @@ public class TestApp {
         );
         MusicPlayer player = context.getBean("musicPlayer",MusicPlayer.class);
         player.play();
+        System.out.println(player.getVolume());
         context.close();
     }
 }
